@@ -3,7 +3,7 @@
   <div id="wrapperswitch">
     <div class="wrapperswitch_item">
         <span class="wrapperswitch_word">ZOLOTOE RUNO</span>
-        <img src="../img/rotate.gif" alt="switchphone">
+        <img src="../img/rotate.gif" alt="switchphone" class="wrapperswitch_img">
         <span class="wrapperswitch_screen">Поверните экран</span>
     </div>
   </div>
@@ -138,6 +138,10 @@ export default {
         line-height: 39px;
         letter-spacing: 0.1em;
         color: #FFFFFF;
+     }
+     .wrapperswitch_img{
+       width:220px;
+       height:220px;
      }
     }
 }
