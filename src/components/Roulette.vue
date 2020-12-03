@@ -2,7 +2,8 @@
 <div id="output">
   <div id="wrapperswitch">
     <div class="wrapperswitch_item">
-        <img src="../img/rotate.png" alt="switchphone">
+        <span class="wrapperswitch_word">ZOLOTOE RUNO</span>
+        <img src="../img/rotate.gif" alt="switchphone">
         <span class="wrapperswitch_screen">Поверните экран</span>
     </div>
   </div>
@@ -118,7 +119,7 @@ export default {
      justify-content: center;
      align-items: center;
      flex-direction: column;
-     margin-top: 120px;
+     margin-top: 50px;
      .wrapperswitch_screen{
         font-family: Roboto;
         font-style: normal;
@@ -128,6 +129,15 @@ export default {
         letter-spacing: 0.05em;
         color: #FFFFFF;
         padding-top: 20px;
+     }
+     .wrapperswitch_word{
+        font-family: Rosarivo;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 39px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
      }
     }
 }
