@@ -82,7 +82,6 @@ export default {
     font-style: normal;
     font-weight: bolder;
     font-size: 25px;
-    line-height: 29px;
     text-align: center;
     text-transform: uppercase;
     color: #000000;
@@ -94,7 +93,6 @@ export default {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 23px;
     color: #000000;
     padding-left: 25px;
 }
@@ -115,7 +113,6 @@ export default {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 23px;
     color: #000000;
     padding-left: 25px;
     margin-top: 190px;
@@ -296,7 +293,7 @@ input{ -webkit-appearance: none;}
 }
   .input_login, .input_password{
    width: 260.4px;
-   height: 39.2px;
+   height: 37.2px;
 }
   .enter_login, .enter_password{
     font-size: 14px;
@@ -321,7 +318,7 @@ input{ -webkit-appearance: none;}
 }
   .input_login, .input_password{
    width: 260.4px;
-   height: 39.2px;
+   height: 37.2px;
 }
   .enter_login, .enter_password{
     font-size: 14px;
