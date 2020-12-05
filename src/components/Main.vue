@@ -67,7 +67,7 @@ export default {
     color: #FFFFFF;
     width: 274px;
     height: 39px;
-    display: block;
+    display: inline;
 }
 .login{
     background: #FFFFFF;
