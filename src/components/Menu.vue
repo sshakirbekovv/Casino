@@ -211,17 +211,22 @@
           </div>
         </div>
        <div class="footer_left" id="footer_left_id">
-         <span class="footer_left_item1">ZOLOTOE RUNO</span><br>
-          <span class="footer_left_item2">Рулетка</span>
+         <span class="footer_left_item1">Ставка<span class="stavka">10000</span></span>
+         <hr class="linear1">
+         <br>
+         <span class="footer_left_item2">Выйгрыш<span class="win">50000</span></span>
+         <hr class="linear1">
+         <!-- <span class="footer_left_item1">ZOLOTOE RUNO</span><br> -->
+          <!--<span class="footer_left_item2">Рулетка</span> -->
         <ul class="hr1" id="hr1">
           <li><div class="cancel new"></div>
-          <li><div class="points add" id="first"><span id="ones">5</span></div></li>
-          <li><div class="points add" id="second"><span id="twos">10</span></div></li>
-          <li><div class="points add" id="third"><span id="twos">50</span></div></li>
+          <li><div class="points add" id="first"><span id="twos">50</span></div></li>
+          <li><div class="points add" id="second"><span id="threes">100</span></div></li>
+          <li><div class="points add" id="third"><span id="threes">500</span></div></li>
           <li><div id="double" class="new"></div></li>
-          <li><div class="points add" id="fourth"><span id="threes">200</span></div></li>
-          <li><div class="points add" id="fifth"><span id="threes">400</span></div></li>
-          <li><div class="points add" id="last"><span id="fours">1000</span></div></li>
+          <li><div class="points add" id="fourth"><span id="fours">2000</span></div></li>
+          <li><div class="points add" id="fifth"><span id="fours">5000</span></div></li>
+          <li><div class="points add" id="last"><span id="fives">10000</span></div></li>
         </ul>
           <div class="footer_hide_cl" id="footer_hide" @click="changepos ()">
              <div class="footer_hide_inner_cl" id="footer_hide_inner">
@@ -498,14 +503,14 @@
     </tr>
 </table>
     <ul class="hr" id="hr">
-        <li><div class="cancel"></div><span class="word_cancel">Отмена</span></li>
-        <li><div class="points" id="first"><span id="ones">5</span></div></li>
-        <li><div class="points" id="second"><span id="twos">10</span></div></li>
-        <li><div class="points" id="third"><span id="twos">50</span></div></li>
-        <li><div class="points" id="fourth"><span id="threes">200</span></div></li>
-        <li><div class="points" id="fifth"><span id="threes">400</span></div></li>
-        <li><div class="points" id="last"><span id="fours">1000</span></div></li>
-        <li><div id="double"></div><span class="double_word">Удвоение</span></li>
+        <li><div class="cancel"></div></li>
+        <li><div class="points" id="first"><span id="twos">50</span></div></li>
+        <li><div class="points" id="second"><span id="threes">100</span></div></li>
+        <li><div class="points" id="third"><span id="threes">500</span></div></li>
+        <li><div class="points" id="fourth"><span id="fours">2000</span></div></li>
+        <li><div class="points" id="fifth"><span id="fours">5000</span></div></li>
+        <li><div class="points" id="last"><span id="fives">10000</span></div></li>
+        <li><div id="double"></div></li>
     </ul>
     </div>
      </div>
@@ -637,6 +642,12 @@ export default {
   background-size: contain !important;
   background-repeat: no-repeat !important;
 }
+.stavka{
+ padding-left: 13rem;
+}
+.win{
+  padding-left: 11.8rem;
+}
 .otherside1{
   background:#EEEEEE;
 }
@@ -748,27 +759,24 @@ export default {
   margin-left:54px;
 }
 .footer_left_item1{
-  font-family: Rosarivo;
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 15px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
-  margin-top:29px;
+  margin-top:10px;
   display: inline-block;
-  margin-left:57px;
+  margin-left:10px;
 }
 .footer_left_item2{
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 15px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: #FFFFFF;
-  margin-left:124px;
+  margin-left:10px;
 }
 #green{
   width: 744px;
@@ -869,16 +877,6 @@ export default {
   width: 44px;
   height: 44px;
 }
-.word_cancel{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 11px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #969696;
-}
 #first{
   background: url(../img/first.svg);
   width: 44px;
@@ -917,6 +915,17 @@ ul{
 ul.hr{
    margin: 0;
    padding: 0px 2px 2px 80px;
+   .cancel{
+     background-size: contain !important;
+     background-repeat: no-repeat !important;
+     height: 57px;
+   }
+    #double{
+     background-size: contain !important;
+     background-repeat: no-repeat !important;
+     width: 57px;
+     height: 57px;
+   }
 }
 ul.hr{
     li{
@@ -959,16 +968,6 @@ ul.hr1{
   width: 44px;
   height: 44px;
 }
-.double_word{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 11px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #969696;
-}
 .points{
   font-family: Roboto;
   font-style: normal;
@@ -995,6 +994,11 @@ ul.hr1{
 #fours{
   margin-top:14px;
   margin-left:8px;
+  font-size: 12px;
+}
+#fives{
+  margin-top:14px;
+  margin-left:5px;
   font-size: 12px;
 }
 .right_table{
@@ -1218,14 +1222,19 @@ ul.footer_right_list{
         margin-left:12.6px;
     }
     #threes{
-        font-size: 11.7px;
+        font-size: 12.6px;
         margin-top:12.6px;
         margin-left:9.9px;
     }
     #fours{
-      font-size: 10.8px;
+      font-size: 12.6px;
       margin-top:12.6px;
       margin-left:7.2px;
+    }
+     #fives{
+      font-size: 12.6px;
+      margin-top:12.6px;
+      margin-left:3.2px;
     }
   }
 }
@@ -1284,14 +1293,19 @@ ul.footer_right_list{
         margin-left:10.6px;
     }
     #threes{
-        font-size: 10.7px;
+        font-size: 11.34px;
         margin-top:10.6px;
         margin-left:8.9px;
     }
     #fours{
-      font-size: 9.8px;
+      font-size: 11.34px;
       margin-top:10.6px;
       margin-left:6.2px;
+    }
+    #fives{
+      font-size: 11.34px;
+      margin-top:10.6px;
+      margin-left:4.2px;
     }
   }
 }
@@ -1709,15 +1723,16 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
+      .stavka{
+        padding-left: 11rem;
+      }
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
+      .win{
+        padding-left: 9.8rem;
+      }
     }
     .footer_left_item{
       width: 194px;
@@ -1795,15 +1810,10 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
     }
     .footer_left_item{
       width: 194px;
@@ -1881,15 +1891,10 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
     }
     .footer_left_item{
       width: 194px;
@@ -1967,15 +1972,10 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
     }
     .footer_left_item{
       width: 194px;
@@ -2053,15 +2053,10 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
     }
     .footer_left_item{
       width: 194px;
@@ -2139,15 +2134,10 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
     }
     .footer_left_item{
       width: 194px;
@@ -2225,15 +2215,10 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
     }
     .footer_left_item{
       width: 194px;
@@ -2311,15 +2296,10 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
+      font-size: 15px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
+      font-size: 15px;
     }
     .footer_left_item{
       width: 194px;
@@ -2397,15 +2377,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -2483,15 +2456,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -2569,15 +2535,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -2655,15 +2614,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -2741,15 +2693,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -2827,15 +2772,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -2913,15 +2851,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -2999,15 +2930,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3085,15 +3009,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3171,15 +3088,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3257,15 +3167,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3343,15 +3246,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3429,15 +3325,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3515,15 +3404,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3601,15 +3483,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3687,15 +3562,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3780,15 +3648,8 @@ ul.footer_right_list{
     width: 312px;
     height: 157px;
     .footer_left_item1{
-      font-size: 21px;
-      line-height: 30px;
-      margin-top:26px;
-      margin-left:51px;
     }
     .footer_left_item2{
-      font-size: 18px;
-      line-height: 20px;
-      margin-left:111px;
     }
     .footer_left_item{
       width: 194px;
@@ -3870,6 +3731,9 @@ ul.footer_right_list{
 }
 /* tablet, phones */
 @media (max-width: 1250px){
+  .linear1{
+    display:none;
+  }
   #footer_hide{
     display:block;
     margin: 22px 0px 23px 37px;
@@ -4140,7 +4004,7 @@ ul.footer_right_list{
 }
 @media (max-width: 812px){
   .table, #green{
-    width: 673px !important;
+    width: 668px !important;
   }
   .trans{
     margin-left: 470px !important;
@@ -4152,7 +4016,223 @@ ul.footer_right_list{
     padding-left: 70px;
   }
   .footer_right_2{
-    width: 673px !important;
+    width: 668px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 804px){
+  .table, #green{
+    width: 660px !important;
+  }
+  .trans{
+    margin-left: 470px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 660px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 796px){
+  .table, #green{
+    width: 652px !important;
+  }
+  .trans{
+    margin-left: 470px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 652px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 788px){
+  .table, #green{
+    width: 644px !important;
+  }
+  .trans{
+    margin-left: 440px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 644px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 780px){
+  .table, #green{
+    width: 636px !important;
+  }
+  .trans{
+    margin-left: 440px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 636px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 772px){
+  .table, #green{
+    width: 628px !important;
+  }
+  .trans{
+    margin-left: 440px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 628px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 764px){
+  .table, #green{
+    width: 620px !important;
+  }
+  .trans{
+    margin-left: 440px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 620px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 756px){
+  .table, #green{
+    width: 612px !important;
+  }
+  .trans{
+    margin-left: 440px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 612px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 748px){
+  .table, #green{
+    width: 604px !important;
+  }
+  .trans{
+    margin-left: 420px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 604px !important;
+   .right_table_2{
+      width: 480.6px;
+      height: 135px;
+      margin-left: 90px;
+      position:relative;
+      bottom:9px;
+   }
+  }
+}
+@media (max-width: 740px){
+  .table, #green{
+    width: 596px !important;
+  }
+  .trans{
+    margin-left: 420px !important;
+  }
+  .green_img{
+    margin-left:20px !important;
+  }
+      ul.footer_right_list{
+    padding-left: 70px;
+  }
+  .footer_right_2{
+    width: 596px !important;
    .right_table_2{
       width: 480.6px;
       height: 135px;
@@ -4164,7 +4244,7 @@ ul.footer_right_list{
 }
 @media (max-width: 736px){
   .table, #green{
-    width: 596px !important;
+    width: 591px !important;
   }
   .trans{
     margin-left: 400px !important;
@@ -4176,7 +4256,7 @@ ul.footer_right_list{
     padding-left: 30px;
   }
   .footer_right_2{
-    width: 596px !important;
+    width: 591px !important;
    .right_table_2{
       width: 480.6px;
       height: 135px;
