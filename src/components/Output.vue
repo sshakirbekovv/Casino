@@ -16,7 +16,7 @@
              <li class="header_link" id="header_sto"><span id="sto">100.000 тг</span></li>
              <li class="header_link" id="header_button"> <input type="button" value="Вывести" id="button" @click="changeWidth()"> </li>
              <li class="header_link" id="name">Момын Орынбаев</li>
-             <li class="header_link" id="profile"><img src="../img/avatar.png" alt="mini-profile"></li>
+             <li class="header_link" id="profile"><img src="../img/avatar.png" alt="mini-profile" @click="changePass()"></li>
            </ul>
          </nav>
        </div>
@@ -33,6 +33,16 @@
           <input type="text" placeholder="Номер карты" class="input_card"/>
           <input type="text" placeholder="Сумма" class="input_sum"/>
           <input type="submit" value="Вывести" class="button_output">
+       </div>
+       </div>
+         <div class="hide_input_parent">
+        <div class="hide_input" id="reset_pass" :style="{ display: computedPass }">
+          <span @click="closepass()"><img src="../img/exitmodel.png" alt="exit" class="exit"></span>
+          <span id="output_word">Сбросить пароль</span><br>
+          <small><span id="hide_day">Сбросить пароль</span></small>
+          <input type="password" placeholder="Пароль" class="input_card"/>
+          <input type="password" placeholder="Повторите пароль" class="input_sum"/>
+          <input type="submit" value="Сбросить" class="button_output">
        </div>
        </div>
      </div>
@@ -56,6 +66,9 @@ export default {
   computed: {
     computedWidth () {
       return this.display
+    },
+    computedPass () {
+      return this.display
     }
   },
   methods: {
@@ -65,7 +78,6 @@ export default {
     },
     changeWidth (event) {
       const a = document.getElementById('reloader')
-      this.display = ''
       if (a.className === 'reload') {
         document.getElementById('hide_input_id').style.display = ''
         a.className += ' shadow'
@@ -74,9 +86,24 @@ export default {
         document.getElementById('hide_input_id').style.display = 'none'
       }
     },
+    changePass (event) {
+      const c = document.getElementById('reloader')
+      if (c.className === 'reload') {
+        document.getElementById('reset_pass').style.display = ''
+        c.className += ' shadow'
+      } else {
+        c.className = 'reload'
+        document.getElementById('reset_pass').style.display = 'none'
+      }
+    },
     close () {
       const a = document.getElementById('reloader')
       document.getElementById('hide_input_id').style.display = 'none'
+      a.className = 'reload'
+    },
+    closepass () {
+      const a = document.getElementById('reloader')
+      document.getElementById('reset_pass').style.display = 'none'
       a.className = 'reload'
     }
   }
@@ -143,6 +170,9 @@ input{ -webkit-appearance: none;}
 .girl_img{
   cursor:pointer;
 }
+#profile{
+    cursor: pointer;
+  }
 .header_list{
   display:flex;
   position: relative;
@@ -184,9 +214,15 @@ input{ -webkit-appearance: none;}
   #hide_input_id{
      margin-left:200px;
   }
+  #reset_pass {
+    margin-left:200px;
+  }
 }
 @media (max-width: 885px){
   #hide_input_id{
+     margin-left:100px;
+  }
+  #reset_pass {
      margin-left:100px;
   }
 }
@@ -194,9 +230,15 @@ input{ -webkit-appearance: none;}
   #hide_input_id{
      margin-left:80px;
   }
+  #reset_pass {
+     margin-left:80px;
+  }
 }
 @media (max-width: 780px){
   #hide_input_id{
+     margin-left:40px;
+  }
+  #reset_pass {
      margin-left:40px;
   }
 }
@@ -209,6 +251,12 @@ input{ -webkit-appearance: none;}
     height:20px !important;
   }
   #hide_input_id{
+     width: 386px;
+     height: 320px;
+     margin-left:5px;
+     margin-top:-322px;
+  }
+  #reset_pass {
      width: 386px;
      height: 320px;
      margin-left:5px;
@@ -265,6 +313,12 @@ input{ -webkit-appearance: none;}
      margin-left:5px;
      margin-top:-322px;
   }
+  #reset_pass {
+     width: 366px;
+     height: 330px;
+     margin-left:5px;
+     margin-top:-322px;
+  }
   #output_word{
     font-size:18px !important;
     margin-left: 12px !important;
@@ -307,6 +361,11 @@ input{ -webkit-appearance: none;}
 }
 @media (max-width: 375px){
   #hide_input_id{
+     width: 302.4px;
+     height: 270px;
+     margin-left:30px;
+  }
+  #reset_pass {
      width: 302.4px;
      height: 270px;
      margin-left:30px;
@@ -359,6 +418,11 @@ input{ -webkit-appearance: none;}
 }
 @media (max-width: 330px){
     #hide_input_id{
+     width: 302.4px;
+     height: 270px;
+     margin-left:0px;
+  }
+   #reset_pass {
      width: 302.4px;
      height: 270px;
      margin-left:0px;
